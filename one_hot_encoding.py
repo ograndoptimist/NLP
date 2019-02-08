@@ -149,4 +149,11 @@ if __name__ == '__main__':
              their meetings are, and how to contact them. Using these pages, teammates are able to\
              communicate and coordinate projects."
     
-    print(one_hot_encoding(text))
+    save = one_hot_encoding(text)
+    
+    save_array = ''
+    for k in save:
+        save_array += str(k) + '\n'
+
+    with open('array.txt', 'w') as file:
+            file.write(save_array)
