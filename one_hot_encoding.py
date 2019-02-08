@@ -101,13 +101,10 @@ def one_hot_encoding(text: str):
         Example:
             >>> text = "Some random text here"
             >>> one_hot_encoding(text)
-            [[1 0 0 ... 0 0 0]
-             [0 1 0 ... 0 0 0]
-             [0 0 1 ... 0 0 0]
-                    ...
-             [0 0 0 ... 1 0 0]
-             [0 0 0 ... 0 1 0]
-             [0 0 0 ... 0 0 1]]
+            [[1 0 0 0]
+             [0 1 0 0]
+             [0 0 1 0]
+             [0 0 0 1]]
     """
     
     assert text != str, "Please, enter a text!"
