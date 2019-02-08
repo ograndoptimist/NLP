@@ -97,7 +97,17 @@ def one_hot_encoding(text: str):
         ::params:
             text: a string  containing the raw text the have to be preprocessed.
         ::returns:
-            returns a list composed of 0's and 1's, where 1 is assigned to the local where the integer index is. 
+            returns a list composed of 0's and 1's, where 1 is assigned to the local where the integer index is.
+        Example:
+            >>> text = "Some random text here"
+            >>> one_hot_encoding(text)
+            [[1 0 0 ... 0 0 0]
+             [0 1 0 ... 0 0 0]
+             [0 0 1 ... 0 0 0]
+                    ...
+             [0 0 0 ... 1 0 0]
+             [0 0 0 ... 0 1 0]
+             [0 0 0 ... 0 0 1]]
     """
     
     assert text != str, "Please, enter a text!"
