@@ -2,7 +2,8 @@
     Playing with NLP tasks.
     Trying to implement one_hot_encoding.
     ograndoptimist, 08.02.2019.
-    http://github.com/ograndoptimist, e-mail: gabrieliprj@gmail.com
+    http://github.com/ograndoptimist, gabrieliprj@gmail.com
+    mentored by Karla Figueiredo, karla.figueiredo@gmail.com
 """
 
 from numpy import array
