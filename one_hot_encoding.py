@@ -117,7 +117,6 @@ def one_hot_encoding(text: str):
     return array(one_hot_vector)     
 
 
-
 if __name__ == '__main__':
 
     text = "The Teams page contains a listing of the various Community Teams,\
