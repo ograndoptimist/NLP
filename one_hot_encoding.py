@@ -17,10 +17,11 @@ def eliminatePontuaction(text: str):
         ::params:
                 text: a string containg all the suplemented text.
         ::return:
-                returns a list containing all of the words from the original string.
+                returns a string containing all of the words from the original string but without
+                especial symbols and capital letters.
         Example:
             >>> eliminatePontuaction("Some random text.")
-            ['some', 'random', 'text', 'here']
+            'some random text here'
     """
 
     preprocessed_text = ''
@@ -36,22 +37,22 @@ def eliminatePontuaction(text: str):
                 new_word += character
         preprocessed_text +=  ' ' + new_word        
 
-    return preprocessed_text.split()              
+    return preprocessed_text.lower()              
             
 
-def tokenization(text: str):
+def tokenization(text_preprocessed: str):
     """
         Build the tokenization.
         ::params:
-                text: the raw text to be processed.
+                text_preprocessed: the preprocessed text to be tokenized.
         ::return:
                 returns a list of tokens.
         Example:
-            >>> tokenization("Some random random text text here.")
+            >>> tokenization("some random text here")
             ['some', 'random', 'text', 'here']
     """
 
-    raw_words = eliminatePontuaction(text)
+    raw_words = text_preprocessed.split()
 
     token = []
 
@@ -121,7 +122,8 @@ def one_hot_encoding(text: str):
     
     assert text != str, "Please, enter a text!"
     
-    tokens = tokenization(text)
+    text_preprocessed = eliminatePontuaction(text)
+    tokens = tokenization(text_preprocessed)
     vocabulary_dict = wordToIndex(tokens)
     vector_of_index = vectorization(vocabulary_dict)
 
