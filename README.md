@@ -1,2 +1,2 @@
 # NLP
-Some code related to Natural Language Processing and its preprocessing methods.
+Some code related to Natural Language Processing and its Preprocessing methods.
