@@ -11,7 +11,7 @@ from numpy import array
 print(__doc__)
 
 
-def eliminatePontuaction(text: str):
+def preprocessText(text: str):
     """
         Eliminate pontuactions, single and double quoted symbols from the current string.
         ::params:
@@ -122,7 +122,7 @@ def one_hot_encoding(text: str):
     
     assert text != str, "Please, enter a text!"
     
-    text_preprocessed = eliminatePontuaction(text)
+    text_preprocessed = preprocessText(text)
     tokens = tokenization(text_preprocessed)
     vocabulary_dict = wordToIndex(tokens)
     vector_of_index = vectorization(vocabulary_dict)
