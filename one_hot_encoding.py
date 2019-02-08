@@ -1,6 +1,6 @@
 """
     Playing with NLP tasks.
-    Implementing one_hot_encoding.
+    Implementing one_hot_encoding preprocessing method.
     ograndoptimist, 08.02.2019.
     http://github.com/ograndoptimist, gabrieliprj@gmail.com
     mentored by Karla Figueiredo, karla.figueiredo@gmail.com
