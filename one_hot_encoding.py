@@ -70,6 +70,9 @@ def wordToIndex(tokens: list):
         ::return:
             dicio: returns a dictionary containing all the vocabulary composed of
             the following content: {'word': integer_index}.
+         Example:
+            >>> wordToIndex(['some', 'random', 'text', 'here'])
+            {'some': 0, 'random': 1, 'text': 2, 'here': 3}
     """
 
     dicio = dict()
@@ -87,6 +90,9 @@ def vectorization(vocabulary_dict: dict):
             vocabulary_dict: a dict containing all of the text's vocabulary.
         ::return:
             returns a list of index correspondent to each text's word.
+        Example:
+            >>> vectorization({'some': 0, 'random': 1, 'text': 2, 'here': 3})
+            [0, 1, 2, 3]
     """
 
     vectorize = []
