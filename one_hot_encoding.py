@@ -46,6 +46,9 @@ def tokenization(text: str):
                 text: the raw text to be processed.
         ::return:
                 returns a list of tokens.
+        Example:
+            >>> tokenization("Some random random text text here.")
+            ['some', 'random', 'text', 'here']
     """
 
     raw_words = eliminatePontuaction(text)
