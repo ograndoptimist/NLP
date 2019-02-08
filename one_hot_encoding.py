@@ -143,6 +143,7 @@ if __name__ == '__main__':
              their responsibilities, links to their Wiki Home Pages and leaders, communication tools,\
              and a quick reference to let you know whether and when they hold meetings.\
              Most Teams’ Wiki Home Pages provide information about who they are, what they do, when\
-             their meetings are, and how to contact them. Using these pages, teammates are able to communicate and coordinate projects."
+             their meetings are, and how to contact them. Using these pages, teammates are able to\
+             communicate and coordinate projects."
     
     print(one_hot_encoding(text))
