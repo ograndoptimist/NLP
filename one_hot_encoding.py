@@ -84,21 +84,22 @@ def wordToIndex(tokens: list):
     return dicio
 
 
-def vectorization(vocabulary_dict: dict):
+def vectorization(list_of_words: list, vocabulary_dict: dict):
     """
         Vectorization of the tokens.
         ::params:
+            list_of_words: a list of preprocessed words from the rax text
             vocabulary_dict: a dict containing all of the text's vocabulary.
         ::return:
             returns a list of index correspondent to each text's word.
         Example:
-            >>> vectorization({'some': 0, 'random': 1, 'text': 2, 'here': 3})
+            >>> vectorization(['some', 'random', 'text', 'here'], {'some': 0, 'random': 1, 'text': 2, 'here': 3})
             [0, 1, 2, 3]
     """
 
     vectorize = []
 
-    for word in vocabulary_dict.keys():
+    for word in list_of_words:
         vectorize.append(vocabulary_dict[word])
 
     return vectorize    
@@ -125,7 +126,7 @@ def one_hot_encoding(text: str):
     text_preprocessed = preprocessText(text)
     tokens = tokenization(text_preprocessed)
     vocabulary_dict = wordToIndex(tokens)
-    vector_of_index = vectorization(vocabulary_dict)
+    vector_of_index = vectorization(text_preprocessed.split(), vocabulary_dict)
 
     length_dict = len(vocabulary_dict)
 
