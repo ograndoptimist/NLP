@@ -17,7 +17,10 @@ def eliminatePontuaction(text: str):
         ::params:
                 text: a string containg all the suplemented text.
         ::return:
-                returns a list containing all of the words from the original string.                
+                returns a list containing all of the words from the original string.
+        Example:
+            >>> eliminatePontuaction("Some random text.")
+            ['some', 'random', 'text', 'here']
     """
 
     preprocessed_text = ''
