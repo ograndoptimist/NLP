@@ -99,6 +99,8 @@ def one_hot_encoding(text: str):
             returns a list composed of 0's and 1's, where 1 is assigned to the local where the integer index is. 
     """
     
+    assert text != str, "Please, enter a text!"
+    
     tokens = tokenization(text)
     vocabulary_dict = wordToIndex(tokens)
     vector_of_index = vectorization(vocabulary_dict)
